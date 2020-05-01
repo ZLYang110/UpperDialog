@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zlylib.upperdialog.view.ContainerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zlylib.upperdialog.view.BackgroundView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <com.zlylib.upperdialog.view.DragLayout
+        android:id="@+id/fl_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</com.zlylib.upperdialog.view.ContainerLayout>
