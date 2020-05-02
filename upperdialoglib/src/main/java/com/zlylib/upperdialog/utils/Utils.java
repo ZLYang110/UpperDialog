@@ -1,5 +1,6 @@
 package com.zlylib.upperdialog.utils;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -23,7 +24,20 @@ import com.zlylib.upperdialog.view.ContainerLayout;
  * @date 2018/10/25
  */
 public final class Utils {
+    @SuppressLint("StaticFieldLeak")
+    private static Context context = null;
 
+    public static void init(Context context) {
+        Utils.context = context;
+
+    }
+
+    public static Context getAppContext() {
+        if (context == null) {
+            throw new RuntimeException("Utils未在Application中初始化");
+        }
+        return context;
+    }
     public static <T> T requireNonNull(T obj, String msg) {
         if (obj == null) {
             throw new NullPointerException(msg);
@@ -140,7 +154,7 @@ public final class Utils {
         return bitmap;
     }
 
-    static void transparent(Activity activity) {
+    public static void transparent(Activity activity) {
         final Window window = activity.getWindow();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);

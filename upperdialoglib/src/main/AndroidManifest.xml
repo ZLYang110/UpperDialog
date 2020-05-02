@@ -1,2 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zlylib.upperdialog" />
+    package="com.zlylib.upperdialog">
+
+    <application>
+        <activity
+            android:name=".view.UpperActivity"
+            android:theme="@style/LayerActivityTheme" />
+        <provider
+            android:name=".pro.ActivityProvider"
+            android:authorities="${applicationId}.activityprovider"
+            android:exported="false"
+            android:multiprocess="true" />
+    </application>
+</manifest>
