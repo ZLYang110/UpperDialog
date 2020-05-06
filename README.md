@@ -78,7 +78,7 @@ allprojects {
 // build.gradle(Module:)
 dependencies {
 
-   implementation 'com.github.ZLYang110:UpperDialog:1.0'
+   implementation 'com.github.ZLYang110:UpperDialog:1.1'
 }
 ```
 
