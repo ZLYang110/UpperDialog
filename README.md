@@ -7,7 +7,7 @@ Android轻量级弹窗。
 
 [GitHub主页](https://github.com/ZLYang110/UpperDialog)
 
-[GitHub主页](https://github.com/ZLYang110/UpperDialog)
+[简书](https://www.jianshu.com/p/8c7b2ebd892a)
 
 [Demo下载](https://github.com/ZLYang110/UpperDialog/raw/master/app/release/app-release.apk)
 
@@ -51,8 +51,8 @@ Android轻量级弹窗。
 # 说明
 
 # 运行截图
-<img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_115850_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="图片名称"/> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_120027_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="图片名称" /> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_115850_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="图片名称"  /> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_120035_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="下载"  />
-<img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_110015_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="图片名称"   /> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_110022_com.zlyandroid.upperdi.jpg" width = "180" height = "300"" alt="图片名称"  /> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_110027_com.zlyandroid.upperdi.jpg" width = "180" height = "300"alt="图片名称"   />
+<img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_115850_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="图片名称"/> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_120027_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="图片名称" /> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_115850_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="图片名称"/> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_120035_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="下载"  />
+<img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_110015_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="图片名称"/> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_110022_com.zlyandroid.upperdi.jpg" width = "180" height = "300"" alt="图片名称"/> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_110027_com.zlyandroid.upperdi.jpg" width = "180" height = "300"alt="图片名称" />
 
 # 使用说明
 
