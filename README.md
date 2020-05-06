@@ -52,8 +52,7 @@ Android轻量级弹窗。
 
 # 运行截图
 <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_115850_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="图片名称"/> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_120027_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="图片名称" /> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_115850_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="图片名称"/> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_120035_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="下载"  />
-<img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_110015_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="图片名称"/>
-<img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_110022_com.zlyandroid.upperdi.jpg" width = "180" height = "300"" alt="图片名称"/> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_110027_com.zlyandroid.upperdi.jpg" width = "180" height = "300"alt="图片名称" />
+<img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_110015_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="图片名称"/> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_110022_com.zlyandroid.upperdi.jpg" width = "180" height = "300" alt="图片名称"/> <img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_110027_com.zlyandroid.upperdi.jpg" width = "180" height = "300"alt="图片名称" />
 
 # 使用说明
 
@@ -106,7 +105,7 @@ dependencies {
 
 
   TipDialog.with(getActivity())
-           .message("确定要清除缓存吗？")
+           .message("确定不给个star么？")
            .onYes(new SimpleCallback<Void>() {
            @Override
            public void onResult(Void data) {
