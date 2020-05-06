@@ -14,6 +14,7 @@ import com.zlylib.upperdialog.utils.Utils;
 
 /**
  * @author zhangliyang
+ * GitHub: https://github.com/ZLYang110
  */
 public class DecorLayer extends Layer implements ComponentCallbacks, ViewTreeObserver.OnGlobalLayoutListener {
 

@@ -32,6 +32,8 @@
     <color name="second">#666666</color>
     <color name="third">#999999</color>
     <color name="fourth">#cccccc</color>
+    <color name="rednrd">#CD3333</color>
+
     <!--文字颜色-->
     <color name="text_main">@color/main</color>
     <color name="text_main_alpha">@color/main_alpha</color>
@@ -45,23 +47,6 @@
     <color name="text_invert_alpha">#88ffffff</color>
     <color name="text_on_main">#ffffff</color>
 
-
-    <!--自定义主题-->
-    <color name="main_color_2">#f44836</color>
-    <color name="main_color_3">#f2821e</color>
-    <color name="main_color_4">#d12121</color>
-    <color name="main_color_5">#16c24b</color>
-    <color name="main_color_6">#16a8c2</color>
-    <color name="main_color_7">#2b86e3</color>
-    <color name="main_color_8">#3f51b5</color>
-    <color name="main_color_9">#9c27b0</color>
-    <color name="main_color_10">#cc268f</color>
-    <color name="main_color_11">#39c5bb</color>
-    <color name="colorAuthor">#529ECC</color>
-    <color name="red_light">#ffff4444</color>
-    <color name="green_light">#ff99cc00</color>
-    <color name="blue_light">#ff33b5e5</color>
-    <color name="orange_light">#ffffbb33</color>
 
 
     <color name="text_color_pri">#ff050505</color>

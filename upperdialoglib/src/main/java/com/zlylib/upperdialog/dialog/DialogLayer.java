@@ -33,7 +33,7 @@ import per.goweii.burred.Blurred;
 
 /**
  * @author zhangliyang
-
+ * GitHub: https://github.com/ZLYang110
  */
 public class DialogLayer extends DecorLayer {
 

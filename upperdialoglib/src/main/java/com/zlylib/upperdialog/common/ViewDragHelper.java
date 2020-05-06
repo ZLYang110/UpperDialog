@@ -16,11 +16,8 @@ import android.widget.OverScroller;
 import java.util.Arrays;
 
 /**
- * @author CuiZhen
- * @date 2019/12/1
- * QQ: 302833254
- * E-mail: goweii@163.com
- * GitHub: https://github.com/goweii
+ * @author zhangliyang
+ * GitHub: https://github.com/ZLYang110
  */
 public class ViewDragHelper {
     private static final String TAG = "ViewDragHelper";

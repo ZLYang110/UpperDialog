@@ -16,11 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Cuizhen
- * @date 2018/5/20
- * QQ: 302833254
- * E-mail: goweii@163.com
- * GitHub: https://github.com/goweii
+ * @author zhangliyang
+ * GitHub: https://github.com/ZLYang110
  */
 public class AnimatorHelper {
 

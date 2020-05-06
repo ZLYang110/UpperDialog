@@ -11,11 +11,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @author CuiZhen
- * @date 2019/3/10
- * QQ: 302833254
- * E-mail: goweii@163.com
- * GitHub: https://github.com/goweii
+ * @author zhangliyang
+ * GitHub: https://github.com/ZLYang110
  */
 public final class ActivityHolder implements Application.ActivityLifecycleCallbacks {
 

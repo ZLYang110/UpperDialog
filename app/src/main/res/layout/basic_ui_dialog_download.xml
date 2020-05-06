@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_big"
+    android:background="@drawable/bg_solid_round_color_surface_radius_def"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_def"
+    android:paddingTop="@dimen/margin_def"
+    android:paddingRight="@dimen/margin_def"
+    android:paddingBottom="@dimen/margin_def">
+
+    <TextView
+        android:id="@+id/basic_ui_tv_dialog_download_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/basic_ui_dialog_download_state_downloading"
+        android:textColor="@color/text_surface"
+        android:textSize="@dimen/text_content" />
+
+    <ProgressBar
+        android:id="@+id/basic_ui_pb_dialog_download"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_def"
+        android:layout_marginTop="@dimen/margin_def"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/basic_ui_dialog_download_progress_bg"
+        tools:progress="50" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_def">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                tools:text="已完成"
+                android:textColor="@color/text_third"
+                android:textSize="@dimen/text_notes" />
+
+            <TextView
+                android:id="@+id/basic_ui_tv_dialog_download_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/text_third"
+                android:textSize="@dimen/text_notes" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="%"
+                android:textColor="@color/text_third"
+                android:textSize="@dimen/text_notes" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:text="共"
+                android:textColor="@color/text_third"
+                android:textSize="@dimen/text_notes" />
+
+            <TextView
+                android:id="@+id/basic_ui_tv_dialog_download_apk_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:text="40M"
+                android:textColor="@color/text_third"
+                android:textSize="@dimen/text_notes" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

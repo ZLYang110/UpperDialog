@@ -7,7 +7,8 @@ import android.view.MotionEvent;
 import android.widget.FrameLayout;
 
 /**
- * Create by cuizhen on {2019/12/3}
+ * @author zhangliyang
+ * GitHub: https://github.com/ZLYang110
  */
 public class ContainerLayout extends FrameLayout {
 

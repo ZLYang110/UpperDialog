@@ -1,4 +1,32 @@
 <resources>
     <string name="app_name">UpperDialog</string>
     <string name="dialog_msg">Android轻量级弹窗</string>
+
+    <!--==========================权限申请============================-->
+    <string name="basic_ui_dialog_permission_close">暂不授权</string>
+    <string name="basic_ui_dialog_permission_next">去授权</string>
+    <string name="basic_ui_dialog_permission_next_go_setting">去设置</string>
+    <string name="basic_ui_dialog_permission_title_unknow">未知</string>
+    <string name="basic_ui_dialog_permission_title_calendar">日历</string>
+    <string name="basic_ui_dialog_permission_title_camera">照相机</string>
+    <string name="basic_ui_dialog_permission_title_contacts">通讯录</string>
+    <string name="basic_ui_dialog_permission_title_location">定位</string>
+    <string name="basic_ui_dialog_permission_title_microphone">麦克风</string>
+    <string name="basic_ui_dialog_permission_title_phone">手机</string>
+    <string name="basic_ui_dialog_permission_title_sms">短信</string>
+    <string name="basic_ui_dialog_permission_title_sensors">传感器</string>
+    <string name="basic_ui_dialog_permission_title_storage">存储空间</string>
+    <string name="basic_ui_dialog_permission_description_title_holder">相关</string>
+    <string name="basic_ui_dialog_permission_description">我们需要获取%s权限以确保应用的正常运行，请点击去授权完成权限申请。</string>
+    <string name="basic_ui_dialog_permission_description_go_setting">您已拒绝应用使用%s权限，这将影响功能的正常运行，请前往设置打开权限。</string>
+    <string name="basic_ui_dialog_permission_install_title">安装应用</string>
+    <string name="basic_ui_dialog_permission_install">我们将开始请求安装应用权限</string>
+    <string name="basic_ui_dialog_permission_overlay_title">悬浮窗</string>
+    <string name="basic_ui_dialog_permission_overlay">我们将开始请求悬浮窗权限</string>
+    <string name="basic_ui_dialog_permission_setting_title">修改设置</string>
+    <string name="basic_ui_dialog_permission_setting">我们将开始请求修改设置权限</string>
+    <string name="basic_ui_dialog_permission_notificationAccess_title">访问通知</string>
+    <string name="basic_ui_dialog_permission_notificationAccess">我们将开始请求访问通知权限</string>
+    <string name="basic_ui_dialog_permission_notificationShow_title">显示通知</string>
+    <string name="basic_ui_dialog_permission_notificationShow">我们将开始请求显示通知权限</string>
 </resources>

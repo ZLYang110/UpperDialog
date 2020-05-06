@@ -5,16 +5,18 @@ Android轻量级弹窗。
 自定义Dialog弹窗，自定义大小和位置，进出场方式。链式调用，自由扩展。
 
 
-[GitHub主页](https://https://github.com/ZLYang110/UpperDialog)
+[GitHub主页](https://github.com/ZLYang110/UpperDialog)
 
-[Demo下载](https://https://github.com/ZLYang110/UpperDialog/raw/master/app/release/app-release.apk)
+[GitHub主页](https://github.com/ZLYang110/UpperDialog)
+
+[Demo下载](https://github.com/ZLYang110/UpperDialog/raw/master/app/release/app-release.apk)
 
 
 
 
 
 # 简介
-
+- anylayer
 - 同时兼容support和androidx
 - 实现几种常用效果
 - LoadingDialog 加载
@@ -30,6 +32,16 @@ Android轻量级弹窗。
    - 支持从ApplicationContext中弹出
    - 支持拖拽关闭
    - 支持不拦截外部事件
+- Toast效果
+   - 支持自定义图标和文字
+   - 支持自定义显示时长
+   - 支持自定义位置
+   - 支持自定义背景资源和颜色
+   - 支持自定义透明度
+   - 支持自定义进出场动画
+- Popup效果
+   - 拥有Dialog效果特性
+   - 支持跟随目标View移动
 
 
 
@@ -38,7 +50,14 @@ Android轻量级弹窗。
 
 # 说明
 
-
+# 运行截图
+<img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_110015_com.zlyandroid.upperdi.jpg" width = "300" height = "200" alt="图片名称" align=center />
+<img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_110022_com.zlyandroid.upperdi.jpg" width = "300" height = "200" alt="图片名称" align=center />
+<img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_110027_com.zlyandroid.upperdi.jpg" width = "300" height = "200" alt="图片名称" align=center />
+<img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_115746_com.zlyandroid.upperdi.jpg" width = "300" height = "200" alt="图片名称" align=center />
+<img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_115850_com.zlyandroid.upperdi.jpg" width = "300" height = "200" alt="图片名称" align=center />
+<img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_120027_com.zlyandroid.upperdi.jpg" width = "300" height = "200" alt="图片名称" align=center />
+<img src="https://github.com/ZLYang110/UpperDialog/raw/master/screenshot/Screenshot_20200506_120035_com.zlyandroid.upperdi.jpg" width = "300" height = "200" alt="图片名称" align=center />
 
 # 使用说明
 
@@ -64,6 +83,7 @@ allprojects {
 // build.gradle(Module:)
 dependencies {
 
+   implementation 'com.github.ZLYang110:UpperDialog:1.0'
 }
 ```
 
@@ -172,7 +192,69 @@ dependencies {
 
 ```
 
+
+### Toast
+
+
+```java
+
+/**
+ * 正常弹出
+ */
+   ToastUtils.show(ToastActivity.this,"轻量级浮层弹窗");
+
+
+
+ /**
+  * 自定义效果
+  */
+  Upper.toast(context)
+                 .duration(3000)
+                 .message(msg)
+                 .backgroundColorRes(R.color.default_title_background_color)
+                 .gravity(gravity)
+                 .animator(new Layer.AnimatorCreator() {
+                     @Override
+                     public Animator createInAnimator(View target) {
+                         return AnimatorHelper.createZoomAlphaInAnim(target);
+                     }
+
+                     @Override
+                     public Animator createOutAnimator(View target) {
+                         return AnimatorHelper.createZoomAlphaOutAnim(target);
+                     }
+                 })
+                 .show();
+
+
+```
+
+说明
+
+如果报错如下
+
+```java
+
+java.io.IOException: Permission denied
+
+```
+查看是否有网络权限然后在AndroidManifest.xml中application添加
+
+
+```java
+
+ android:requestLegacyExternalStorage="true"
+
+```
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
 # 更新日志
+
+1.1
+----
+
+  - 添加Toast弹窗
 
 1.0
 ----

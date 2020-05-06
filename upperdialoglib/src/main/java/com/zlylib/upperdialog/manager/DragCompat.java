@@ -10,7 +10,10 @@ import android.widget.ScrollView;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * @author zhangliyang
+ * GitHub: https://github.com/ZLYang110
+ */
 public class DragCompat {
 
     @Deprecated

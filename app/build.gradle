@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.zlyandroid.upperdialog"
-        minSdkVersion 17
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -41,4 +41,7 @@ dependencies {
 
     //recyclerview
     implementation 'androidx.recyclerview:recyclerview:1.1.0'//  this
+
+    //权限申请
+    implementation 'com.github.ZLYang110:MyPermission:1.0'
 }
