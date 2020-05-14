@@ -226,6 +226,22 @@ dependencies {
 
 说明
 
+安装APK   下面配置很关键
+```java
+ <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+ ......
+
+  <provider
+             android:name="androidx.core.content.FileProvider"
+             android:authorities="${applicationId}.fileprovider"
+             android:exported="false"
+             android:grantUriPermissions="true">
+             <meta-data
+                 android:name="android.support.FILE_PROVIDER_PATHS"
+                 android:resource="@xml/file_path" />
+         </provider>
+```
 如果报错如下
 
 ```java
@@ -245,7 +261,10 @@ java.io.IOException: Permission denied
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
 # 更新日志
+1.2
+----
 
+  - 添加popup弹窗
 1.1
 ----
 
@@ -253,6 +272,5 @@ java.io.IOException: Permission denied
 
 1.0
 ----
-
   - dialog轻量级封装库
 

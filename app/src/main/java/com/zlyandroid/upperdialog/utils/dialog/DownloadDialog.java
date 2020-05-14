@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.zlyandroid.upperdialog.R;
 import com.zlyandroid.upperdialog.utils.DownloadUtils;
 import com.zlyandroid.upperdialog.utils.FileUtils;
 import com.zlylib.upperdialog.Upper;
@@ -83,12 +84,14 @@ public class DownloadDialog {
                     tvState.performClick();
                 }
             }
+
+
         });
     }
 
     private void showDialog() {
         upperLayer = Upper.dialog(mActivity)
-                .contentView(com.zlylib.upperdialog.R.layout.basic_ui_dialog_download)
+                .contentView( R.layout.basic_ui_dialog_download)
                 .gravity(Gravity.CENTER)
                 .backgroundDimDefault()
                 .cancelableOnTouchOutside(false)
@@ -96,10 +99,11 @@ public class DownloadDialog {
                 .bindData(new Layer.DataBinder() {
                     @Override
                     public void bindData(Layer layer) {
-                        progressBar = layer.getView(com.zlylib.upperdialog.R.id.basic_ui_pb_dialog_download);
-                        tvProgress = layer.getView(com.zlylib.upperdialog.R.id.basic_ui_tv_dialog_download_progress);
-                        tvApkSize = layer.getView(com.zlylib.upperdialog.R.id.basic_ui_tv_dialog_download_apk_size);
-                        tvState = layer.getView(com.zlylib.upperdialog.R.id.basic_ui_tv_dialog_download_state);
+                        progressBar = layer.getView( R.id.basic_ui_pb_dialog_download);
+                        tvProgress = layer.getView( R.id.basic_ui_tv_dialog_download_progress);
+                        tvApkSize = layer.getView( R.id.basic_ui_tv_dialog_download_apk_size);
+                        tvState = layer.getView( R.id.basic_ui_tv_dialog_download_state);
+
                     }
                 })
                 .onClick(new Layer.OnClickListener() {
@@ -113,7 +117,7 @@ public class DownloadDialog {
                         }
                         DownloadUtils.installApk(mActivity, mApk);
                     }
-                }, com.zlylib.upperdialog.R.id.basic_ui_tv_dialog_download_state);
+                }, R.id.basic_ui_tv_dialog_download_state);
         upperLayer.show();
     }
 

@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Environment;
+import android.util.Log;
 
 import androidx.core.content.FileProvider;
 
@@ -143,6 +144,7 @@ public class DownloadUtils {
             return file;
         }
 
+
         @Override
         protected void onPostExecute(File file) {
             super.onPostExecute(file);
@@ -160,5 +162,6 @@ public class DownloadUtils {
             super.onProgressUpdate(values);
             downloadListener.onProgressUpdate(values[0]);
         }
+
     }
 }

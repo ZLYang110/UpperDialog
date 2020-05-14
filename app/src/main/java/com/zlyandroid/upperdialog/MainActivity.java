@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                        // Toast.makeText(MainActivity.this,"待开发",Toast.LENGTH_LONG).show();
                         break;
                     case 2://Popup
-                        ToastUtils.show(MainActivity.this,"待开发");
+                        startActivity(new Intent(MainActivity.this, PopupActivity.class));
                        // Toast.makeText(MainActivity.this,"待开发",Toast.LENGTH_LONG).show();
                         break;
                     case 3://Float
@@ -143,11 +143,11 @@ public class MainActivity extends AppCompatActivity {
                                 .show();
                         break;
                     case 3://DownloadDialog
-                        //https://github.com/ZLYang110/MyPermission/raw/master/app/release/app-release.apk
-                        //https://github.com/goweii/WanAndroid/releases/download/1.4.6/per.goweii.wanandroid-v1.4.6.apk
-                        //https://github.com/xing16/WanAndroid/raw/1b009f4c331ba40e57d6ac25e65f552a2a4c4223/app/release/app-release.apk
+                        String url="https://download.xloong.com/app/ARFusionMedia_20200508__v0.0.2.apk";
+                        // String url="https://pdds-cdn.uc.cn/27-0/QuarkBrowser/2004/a918c565822ca56db5d5b3602b635ba1/QuarkBrowser_V4.1.0.132_android_pf3300_(Build200428142217).apk?auth_key=1589333697-0-0-a5e5c76b8bfc2a22c261511c3a3befac&SESSID=c0d03eea699479f67804585998605065";
+
                         //https://pdds-cdn.uc.cn/27-0/QuarkBrowser/2004/a918c565822ca56db5d5b3602b635ba1/QuarkBrowser_V4.1.0.132_android_pf3300_(Build200428142217).apk?auth_key=1589333697-0-0-a5e5c76b8bfc2a22c261511c3a3befac&SESSID=c0d03eea699479f67804585998605065
-                        download("","https://pdds-cdn.uc.cn/27-0/QuarkBrowser/2004/a918c565822ca56db5d5b3602b635ba1/QuarkBrowser_V4.1.0.132_android_pf3300_(Build200428142217).apk?auth_key=1589333697-0-0-a5e5c76b8bfc2a22c261511c3a3befac&SESSID=c0d03eea699479f67804585998605065","",false);
+                        download("",url,"",false);
                         break;
                 }
             }

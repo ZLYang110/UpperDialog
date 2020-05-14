@@ -34,6 +34,10 @@
         <activity
             android:name=".DialogActivity"
             android:configChanges="orientation|screenSize|keyboard" />
+        <activity
+            android:name=".PopupActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:configChanges="orientation|screenSize|keyboard" />
 
         <activity
             android:name=".ToastActivity"
