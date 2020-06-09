@@ -105,6 +105,8 @@ dependencies {
 
 
   TipDialog.with(getActivity())
+             //.setAdaption(false)
+             //.setAdaptionSize(false,300) //设置弹窗限定宽度，只有为false，300才能生效 。默认是true
            .message("确定不给个star么？")
            .onYes(new SimpleCallback<Void>() {
            @Override
@@ -261,6 +263,13 @@ java.io.IOException: Permission denied
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
 # 更新日志
+1.3
+----
+
+  - 弹窗是否自适应
+     *  true 根据屏幕大小自适应
+     *  false 固定弹窗大小 （可以给宽高值）
+
 1.2
 ----
 

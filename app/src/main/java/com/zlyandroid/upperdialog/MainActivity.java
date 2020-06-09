@@ -112,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 1://TipDialog
                         TipDialog.with(MainActivity.this)
+                                //.setAdaption(false)
+                                //.setAdaptionSize(false,300)
                                 .message("你觉得好看么？")
                                 .onYes(new SimpleCallback<Void>() {
                                     @Override

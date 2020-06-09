@@ -13,6 +13,7 @@
     <dimen name="spinnerMaxHeight">200dp</dimen>
     <dimen name="scheduleCourseMargin">3dp</dimen>
     <dimen name="scheduleCoursePadding">3dp</dimen>
+    <dimen name="ll__width">300dp</dimen>
 
     <!--==========================通用============================-->
     <dimen name="action_bar_height">44dp</dimen>

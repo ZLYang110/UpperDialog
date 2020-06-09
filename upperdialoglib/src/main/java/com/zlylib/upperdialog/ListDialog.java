@@ -34,7 +34,7 @@ public class ListDialog {
     private CharSequence yesText;
     private CharSequence noText;
     private boolean noBtn = false;
-    private boolean singleBtnYes = false;
+    private boolean singleBtnYes = false;//是否显示取消
     private boolean cancelable = true;
     private OnItemSelectedListener listener = null;
     private BaseQuickAdapter<String, BaseViewHolder> mAdapter = null;

@@ -1,8 +1,11 @@
 package com.zlylib.upperdialog;
 
 import android.content.Context;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.StringRes;
@@ -10,6 +13,10 @@ import androidx.annotation.StringRes;
 import com.zlylib.upperdialog.dialog.DialogLayer;
 import com.zlylib.upperdialog.listener.SimpleCallback;
 import com.zlylib.upperdialog.manager.Layer;
+import com.zlylib.upperdialog.utils.DisplayInfoUtils;
+import com.zlylib.upperdialog.utils.Utils;
+
+import static com.zlylib.upperdialog.utils.ResUtils.getResources;
 
 
 /**
@@ -24,6 +31,13 @@ public class TipDialog {
     private CharSequence yesText;
     private CharSequence noText;
     private boolean singleBtnYes = false;
+    /**
+    * 是否自适应
+     *  true 根据屏幕大小自适应
+     *  false 固定弹窗大小
+    * */
+    private boolean isadaption = true;
+    private int  WidthSize = 400;//设置默认宽度
     private boolean cancelable = true;
     private SimpleCallback<Void> callbackYes = null;
     private SimpleCallback<Void> callbackNo = null;
@@ -36,6 +50,7 @@ public class TipDialog {
 
     private TipDialog(Context context) {
         this.context = context;
+        Utils.init(context);
         mDialogLayer = Upper.dialog(context);
         mDialogLayer.contentView(R.layout.basic_ui_dialog_tip)
                 .gravity(Gravity.CENTER)
@@ -57,6 +72,14 @@ public class TipDialog {
                 .bindData(new Layer.DataBinder() {
                     @Override
                     public void bindData(Layer layer) {
+                        LinearLayout basic_ll_tip = layer.getView(R.id.basic_ll_tip);
+                        if(!isadaption){
+                            ViewGroup.LayoutParams lp;
+                            lp= basic_ll_tip.getLayoutParams();
+                           // int size=getResources().getDimensionPixelSize(R.dimen.ll__width);
+                            lp.width= ((int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, WidthSize, getResources().getDisplayMetrics()));;
+                            basic_ll_tip.setLayoutParams(lp);
+                        }
                         TextView tvYes = layer.getView(R.id.basic_ui_tv_dialog_tip_yes);
                         TextView tvNo = layer.getView(R.id.basic_ui_tv_dialog_tip_no);
                         View vLine = layer.getView(R.id.basic_ui_v_dialog_tip_line);
@@ -110,6 +133,7 @@ public class TipDialog {
                 }, R.id.basic_ui_tv_dialog_tip_no);
     }
 
+
     public TipDialog yesText(CharSequence yesText) {
         this.yesText = yesText;
         return this;
@@ -152,6 +176,15 @@ public class TipDialog {
 
     public TipDialog singleYesBtn() {
         singleBtnYes = true;
+        return this;
+    }
+    public TipDialog setAdaption(boolean isadaption) {
+        this.isadaption = isadaption;
+        return this;
+    }
+    public TipDialog setAdaptionSize(boolean isadaption,int WidthSize) {
+        this.isadaption = isadaption;
+        this.WidthSize = WidthSize;
         return this;
     }
 

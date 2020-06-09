@@ -8,6 +8,7 @@ import com.zlylib.upperdialog.dialog.DialogLayer;
 import com.zlylib.upperdialog.manager.ActivityHolder;
 import com.zlylib.upperdialog.popup.PopupLayer;
 import com.zlylib.upperdialog.toast.ToastLayer;
+import com.zlylib.upperdialog.utils.Utils;
 import com.zlylib.upperdialog.view.UpperActivity;
 
 /**
@@ -21,6 +22,7 @@ public class Upper {
     * 弹窗
     * */
     public static DialogLayer dialog(Context context) {
+
         return new DialogLayer(context);
     }
 
