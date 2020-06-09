@@ -13,7 +13,6 @@ import androidx.annotation.StringRes;
 import com.zlylib.upperdialog.dialog.DialogLayer;
 import com.zlylib.upperdialog.listener.SimpleCallback;
 import com.zlylib.upperdialog.manager.Layer;
-import com.zlylib.upperdialog.utils.DisplayInfoUtils;
 import com.zlylib.upperdialog.utils.Utils;
 
 import static com.zlylib.upperdialog.utils.ResUtils.getResources;

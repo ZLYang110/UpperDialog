@@ -272,11 +272,10 @@ java.io.IOException: Permission denied
 
 1.2
 ----
-
   - 添加popup弹窗
+
 1.1
 ----
-
   - 添加Toast弹窗
 
 1.0
