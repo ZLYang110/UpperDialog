@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_solid_round_color_surface_radius_top_def"
+    android:layout_margin="15dp"
+    android:background="@drawable/bg_press_color_surface_radius_def"
     android:orientation="vertical">
 
     <TextView

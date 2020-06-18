@@ -34,7 +34,8 @@ public class ListDialog {
     private CharSequence yesText;
     private CharSequence noText;
     private boolean noBtn = false;
-    private boolean singleBtnYes = false;//是否显示取消
+    private boolean  noYesBtn;//是否显示确定
+    private boolean noNoBtn = false;//是否显示取消
     private boolean cancelable = true;
     private OnItemSelectedListener listener = null;
     private BaseQuickAdapter<String, BaseViewHolder> mAdapter = null;
@@ -83,9 +84,13 @@ public class ListDialog {
         noBtn = true;
         return this;
     }
+    public ListDialog noYseBtn() {
+        noYesBtn = true;
+        return this;
+    }
 
-    public ListDialog singleYesBtn() {
-        singleBtnYes = true;
+    public ListDialog noNoBtn() {
+        noNoBtn = true;
         return this;
     }
 
@@ -136,22 +141,28 @@ public class ListDialog {
                             TextView tvYes = layer.getView(R.id.basic_ui_tv_dialog_list_yes);
                             TextView tvNo = layer.getView(R.id.basic_ui_tv_dialog_list_no);
                             View vLine = layer.getView(R.id.basic_ui_v_dialog_list_line);
+
+                            if (noNoBtn) {
+                                tvNo.setVisibility(View.GONE);
+                                vLine.setVisibility(View.GONE);
+                            } else if(noYesBtn){
+                                noBtn= true;
+                                tvYes.setVisibility(View.GONE);
+                                vLine.setVisibility(View.GONE);
+                            }else{
+                                tvYes.setVisibility(View.VISIBLE);
+                                tvNo.setVisibility(View.VISIBLE);
+                                vLine.setVisibility(View.VISIBLE);
+                            }
                             if (yesText != null) {
                                 tvYes.setText(yesText);
                             } else {
                                 tvYes.setText(R.string.basic_ui_dialog_btn_yes);
                             }
-                            if (singleBtnYes) {
-                                tvNo.setVisibility(View.GONE);
-                                vLine.setVisibility(View.GONE);
+                            if (noText != null) {
+                                tvNo.setText(noText);
                             } else {
-                                tvNo.setVisibility(View.VISIBLE);
-                                vLine.setVisibility(View.VISIBLE);
-                                if (noText != null) {
-                                    tvNo.setText(noText);
-                                } else {
-                                    tvNo.setText(R.string.basic_ui_dialog_btn_no);
-                                }
+                                tvNo.setText(R.string.basic_ui_dialog_btn_no);
                             }
                         }
 

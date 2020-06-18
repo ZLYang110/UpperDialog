@@ -132,6 +132,10 @@ public class MainActivity extends AppCompatActivity {
 
                         ListDialog.with(MainActivity.this)
                                 .cancelable(true)
+                                .noYseBtn() //不显示确定按钮 三个相互冲突，请设置一个
+                                //.noNoBtn()  //不显示取消按钮
+                                //.noBtn() // 不显示按钮
+
 //                        .title("列表动画")
                                 .datas(lisStr)
                                 .currSelectPos(1)

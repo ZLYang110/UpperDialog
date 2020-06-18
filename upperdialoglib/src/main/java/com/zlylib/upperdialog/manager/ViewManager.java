@@ -19,7 +19,6 @@ import com.zlylib.upperdialog.utils.Utils;
  * @date 2018/10/25
  */
 public class ViewManager {
-
     private ViewGroup mParent = null;
     private View mChild = null;
 
@@ -61,12 +60,8 @@ public class ViewManager {
     }
 
     public void attach() {
-        if (mParent == null) {
-            throw new RuntimeException("parent cannot be null on attach");
-        }
-        if (mChild == null) {
-            throw new RuntimeException("parent cannot be null on attach");
-        }
+        Utils.requireNonNull(mParent, "parent cannot be null on attach");
+        Utils.requireNonNull(mChild, "child cannot be null on attach");
         checkChildParent();
         if (!isAttached()) {
             onAttach();

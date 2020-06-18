@@ -13,7 +13,8 @@ import android.widget.TextView;
  * GitHub: https://https://github.com/ZLYang110
  */
 public class LoadingDialog {
-
+    static Dialog loadingDialog;
+    static TextView tipTextView;
     /**
      * 获取一个类似加载的对话框
      *
@@ -30,12 +31,12 @@ public class LoadingDialog {
          * 得到加载view
          */
         View v = inflater.inflate(R.layout.loading_dialog, null);
-        TextView tipTextView =  v.findViewById(R.id.tipTextView);// 提示文字
+          tipTextView =  v.findViewById(R.id.tipTextView);// 提示文字
         if (msg != null && !msg.equals("")) {
             tipTextView.setText(msg);// 设置加载信息
         }
 
-        Dialog loadingDialog = new Dialog(context, R.style.loading_dialog);// 创建自定义样式dialog
+          loadingDialog = new Dialog(context, R.style.loading_dialog);// 创建自定义样式dialog
         loadingDialog.setCancelable(true);// 可以用“返回键”取消
         loadingDialog.setCanceledOnTouchOutside(false);//
         loadingDialog.setContentView(v);// 设置布局
@@ -46,5 +47,12 @@ public class LoadingDialog {
         loadingDialog.getWindow().setLayout(width ,height);
 
         return loadingDialog;
+    }
+
+    public static void setMsg(String msg){
+        if (loadingDialog!=null&&loadingDialog.isShowing()){
+            tipTextView.setText(msg);// 设置加载信息
+        }
+
     }
 }

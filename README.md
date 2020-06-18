@@ -134,6 +134,9 @@ dependencies {
 
   ListDialog.with(SettingActivity.this)
             .cancelable(true)
+             .noYseBtn() //不显示确定按钮 三个相互冲突，请设置一个
+           //.noNoBtn()  //不显示取消按钮
+           //.noBtn() // 不显示按钮
 //          .title("列表动画")
             .datas(lisStr)
             .currSelectPos(1)
@@ -263,6 +266,12 @@ java.io.IOException: Permission denied
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
 # 更新日志
+
+1.4
+----
+
+  - 优化代码
+  - ListDialog 按钮显示可自定义
 1.3
 ----
 
