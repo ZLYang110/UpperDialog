@@ -78,7 +78,7 @@ allprojects {
 // build.gradle(Module:)
 dependencies {
 
-   implementation 'com.github.ZLYang110:UpperDialog:1.1'
+   implementation 'com.github.ZLYang110:UpperDialog:1.3'
 }
 ```
 
@@ -272,6 +272,8 @@ java.io.IOException: Permission denied
 
   - 优化代码
   - ListDialog 按钮显示可自定义
+
+
 1.3
 ----
 
