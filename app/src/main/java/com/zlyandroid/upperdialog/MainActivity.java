@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 1://TipDialog
                         TipDialog.with(MainActivity.this)
+                               // .yesTextColor(R.color.colorAccent)
                                 //.setAdaption(false)
                                 //.setAdaptionSize(false,300)
                                 .message("你觉得好看么？")
@@ -132,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
 
                         ListDialog.with(MainActivity.this)
                                 .cancelable(true)
+                               // .noTextColor(R.color.colorAccent)
                                 .noYseBtn() //不显示确定按钮 三个相互冲突，请设置一个
                                 //.noNoBtn()  //不显示取消按钮
                                 //.noBtn() // 不显示按钮

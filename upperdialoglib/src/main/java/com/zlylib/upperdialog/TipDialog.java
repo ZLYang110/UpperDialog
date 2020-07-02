@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.ColorRes;
 import androidx.annotation.StringRes;
 
 import com.zlylib.upperdialog.dialog.DialogLayer;
@@ -29,6 +30,8 @@ public class TipDialog {
     private CharSequence msg;
     private CharSequence yesText;
     private CharSequence noText;
+    private int yesTextColor=0;
+    private int noTextColor=0;
     private boolean singleBtnYes = false;
     /**
     * 是否自适应
@@ -83,6 +86,12 @@ public class TipDialog {
                         TextView tvNo = layer.getView(R.id.basic_ui_tv_dialog_tip_no);
                         View vLine = layer.getView(R.id.basic_ui_v_dialog_tip_line);
 
+                        if(yesTextColor!=0){
+                            tvYes.setTextColor(getResources().getColor(yesTextColor));
+                        }
+                        if(noTextColor!=0){
+                            tvNo.setTextColor(getResources().getColor(noTextColor));
+                        }
                         if (singleBtnYes) {
                             tvNo.setVisibility(View.GONE);
                             vLine.setVisibility(View.GONE);
@@ -150,6 +159,15 @@ public class TipDialog {
 
     public TipDialog noText(@StringRes int noText) {
         this.noText = context.getString(noText);
+        return this;
+    }
+    public TipDialog yesTextColor(@ColorRes int yesColor) {
+        this.yesTextColor = yesColor;
+        return this;
+    }
+
+    public TipDialog noTextColor(@ColorRes int noColor) {
+        this.noTextColor = noColor;
         return this;
     }
 

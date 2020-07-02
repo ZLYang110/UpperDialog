@@ -105,6 +105,7 @@ dependencies {
 
 
   TipDialog.with(getActivity())
+    // .yesTextColor(R.color.colorAccent)
              //.setAdaption(false)
              //.setAdaptionSize(false,300) //设置弹窗限定宽度，只有为false，300才能生效 。默认是true
            .message("确定不给个star么？")
@@ -134,6 +135,7 @@ dependencies {
 
   ListDialog.with(SettingActivity.this)
             .cancelable(true)
+              // .yesTextColor(R.color.colorAccent)
              .noYseBtn() //不显示确定按钮 三个相互冲突，请设置一个
            //.noNoBtn()  //不显示取消按钮
            //.noBtn() // 不显示按钮
@@ -266,6 +268,13 @@ java.io.IOException: Permission denied
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
 # 更新日志
+
+1.4.1
+----
+
+  - 优化代码
+  - ListDialog 按钮颜色可自定义
+  - TipDialog 按钮颜色可自定义
 
 1.4
 ----

@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
+import androidx.annotation.ColorRes;
 import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,12 +16,14 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.zlylib.upperdialog.manager.Layer;
 import com.zlylib.upperdialog.utils.ResUtils;
+import com.zlylib.upperdialog.utils.Utils;
 import com.zlylib.upperdialog.view.DragLayout;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.zlylib.upperdialog.utils.ResUtils.getResources;
 
 
 /**
@@ -33,6 +36,8 @@ public class ListDialog {
     private CharSequence title;
     private CharSequence yesText;
     private CharSequence noText;
+    private int yesTextColor=0;
+    private int noTextColor=0;
     private boolean noBtn = false;
     private boolean  noYesBtn;//是否显示确定
     private boolean noNoBtn = false;//是否显示取消
@@ -48,6 +53,7 @@ public class ListDialog {
 
     private ListDialog(Context context) {
         this.context = context;
+        Utils.init(context);
     }
 
     public ListDialog title(CharSequence title) {
@@ -93,7 +99,15 @@ public class ListDialog {
         noNoBtn = true;
         return this;
     }
+    public ListDialog yesTextColor(@ColorRes int yesColor) {
+        this.yesTextColor = yesColor;
+        return this;
+    }
 
+    public ListDialog noTextColor(@ColorRes int noColor) {
+        this.noTextColor = noColor;
+        return this;
+    }
     public ListDialog cancelable(boolean cancelable) {
         this.cancelable = cancelable;
         return this;
@@ -141,7 +155,12 @@ public class ListDialog {
                             TextView tvYes = layer.getView(R.id.basic_ui_tv_dialog_list_yes);
                             TextView tvNo = layer.getView(R.id.basic_ui_tv_dialog_list_no);
                             View vLine = layer.getView(R.id.basic_ui_v_dialog_list_line);
-
+                            if(yesTextColor!=0){
+                                tvYes.setTextColor(getResources().getColor(yesTextColor));
+                            }
+                            if(noTextColor!=0){
+                                tvNo.setTextColor(getResources().getColor(noTextColor));
+                            }
                             if (noNoBtn) {
                                 tvNo.setVisibility(View.GONE);
                                 vLine.setVisibility(View.GONE);
