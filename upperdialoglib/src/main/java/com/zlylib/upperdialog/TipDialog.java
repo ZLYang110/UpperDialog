@@ -207,6 +207,8 @@ public class TipDialog {
 
     public TipDialog cancelable(boolean cancelable) {
         this.cancelable = cancelable;
+        mDialogLayer.cancelableOnTouchOutside(cancelable);
+        mDialogLayer.cancelableOnClickKeyBack(cancelable);
         return this;
     }
 

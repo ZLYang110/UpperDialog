@@ -37,6 +37,7 @@ public class ToastUtils {
         Upper.toast(context)
                 .duration(3000)
                 .message(msg)
+               // .marginBottom(450)
                 .backgroundColorRes(R.color.default_title_background_color)
                 .gravity(gravity)
                 .animator(new Layer.AnimatorCreator() {

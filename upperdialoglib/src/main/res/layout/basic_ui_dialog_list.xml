@@ -34,7 +34,7 @@
         android:id="@+id/basic_ui_v_dialog_list_line_h"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/line"/>
+        android:background="@color/upper_line"/>
 
     <LinearLayout
         android:id="@+id/basic_ui_ll_dialog_list_yes_no"
@@ -56,7 +56,7 @@
             android:id="@+id/basic_ui_v_dialog_list_line"
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/line" />
+            android:background="@color/upper_line" />
 
         <TextView
             android:id="@+id/basic_ui_tv_dialog_list_yes"

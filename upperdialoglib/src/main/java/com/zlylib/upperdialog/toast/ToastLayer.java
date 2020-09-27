@@ -203,16 +203,16 @@ public class ToastLayer extends DecorLayer implements Runnable {
         getChild().setAlpha(getConfig().mAlpha);
         FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) getChild().getLayoutParams();
         params.gravity = getConfig().mGravity;
-        if (getConfig().mMarginLeft >= 0) {
+        if (getConfig().mMarginLeft != Integer.MIN_VALUE) {
             params.leftMargin = getConfig().mMarginLeft;
         }
-        if (getConfig().mMarginTop >= 0) {
+        if (getConfig().mMarginTop != Integer.MIN_VALUE) {
             params.topMargin = getConfig().mMarginTop;
         }
-        if (getConfig().mMarginRight >= 0) {
+        if (getConfig().mMarginRight != Integer.MIN_VALUE) {
             params.rightMargin = getConfig().mMarginRight;
         }
-        if (getConfig().mMarginBottom >= 0) {
+        if (getConfig().mMarginBottom != Integer.MIN_VALUE) {
             params.bottomMargin = getConfig().mMarginBottom;
         }
         getChild().setLayoutParams(params);
@@ -301,10 +301,10 @@ public class ToastLayer extends DecorLayer implements Runnable {
         private int mBackgroundColor = Color.BLACK;
         private float mAlpha = 1F;
         private int mGravity = Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL;
-        private int mMarginLeft = -1;
-        private int mMarginTop = -1;
-        private int mMarginRight = -1;
-        private int mMarginBottom = -1;
+        private int mMarginLeft = Integer.MIN_VALUE;
+        private int mMarginTop = Integer.MIN_VALUE;
+        private int mMarginRight = Integer.MIN_VALUE;
+        private int mMarginBottom = Integer.MIN_VALUE;
     }
 
     protected static class ListenerHolder extends DecorLayer.ListenerHolder {
